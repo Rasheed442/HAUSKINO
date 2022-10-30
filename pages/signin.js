@@ -3,7 +3,7 @@ import React, { useState } from 'react'
 import style from "../styles/sign.module.css"
 import ClipLoader from "react-spinners/ClipLoader"
 import Navbar from '../component/Navbar'
-function signin() {
+function Signin() {
    const [name, setName] = useState()
    const [email, setEmail] = useState()
    const [phone, setPhone] = useState()
@@ -47,7 +47,7 @@ function signin() {
         <div className={style.main}>
         <button type='submit'>Sign in</button>
         <p style={{cursor:"pointer"}}><span style={{color:"gray"}}>New to netflix ?</span> Sign up now</p>
-        <p>This page is protected bt google reCAPTCHA to<br/> ensure you're not a bot. Learn more</p>
+        <p>This page is protected bt google reCAPTCHA to<br/> ensure you&apos;re not a bot. Learn more</p>
         </div> 
      </div></form>
   </div>   
@@ -57,4 +57,4 @@ function signin() {
   )
 }
 
-export default signin
+export default Signin
