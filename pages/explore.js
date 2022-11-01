@@ -23,7 +23,7 @@ function Explore({data}) {
           <button onClick={()=> setOpen(true)}>Play</button>
         </div>
 
-        <div className={style.scene} key={data}>
+        <div className={style.scene}>
           {data.items.map((datas)=>{
              const loop = datas.image
               for(let i=0; i < loop.length; i++){
@@ -33,7 +33,7 @@ function Explore({data}) {
               }
             return(
              
-              <div>
+              <div key={datas.image}>
                   <Movie
                   Image={datas.image}
                   />
