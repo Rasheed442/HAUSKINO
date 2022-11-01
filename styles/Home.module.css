@@ -72,18 +72,18 @@
     padding-right: 5px;
   }
   .main h1{
-    font-size: 30px;
+    font-size: 35px;
   }
   .main p{
     text-align: center;
   }
   .try input{
     padding: 5px;
-    width: 10rem;
-    font-size: 20px;
+    width: 15rem;
+    font-size: 15px;
   }
   .try button{
-    padding: 5px;
+    padding: 3px;
   
   }
   

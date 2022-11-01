@@ -7,9 +7,12 @@ function Signin() {
    const [name, setName] = useState()
    const [email, setEmail] = useState()
    const [phone, setPhone] = useState()
+   const [loading, setLoading] = useState()
 
    async function handler(e){
     e.preventDefault();
+    setLoading(true)
+    window.location="explore"
     const blogs = {name,email,phone}
     const response = await fetch ("https://x8ki-letl-twmt.n7.xano.io/api:oEREOWJG/lead",{
       method:"POST",
@@ -18,6 +21,7 @@ function Signin() {
     })
     const data = await response.json();
     console.log(data)
+    setLoading(false)
    }
   return (
     <div className={style.container}>
@@ -45,7 +49,7 @@ function Signin() {
         </div>
 
         <div className={style.main}>
-        <button type='submit'>Sign in</button>
+        <button type='submit'>{loading ?  <ClipLoader color={"white"} loading={loading}  size={20}/>:"Sign in"}</button>
         <p style={{cursor:"pointer"}}><span style={{color:"gray"}}>New to netflix ?</span> Sign up now</p>
         <p>This page is protected bt google reCAPTCHA to<br/> ensure you&apos;re not a bot. Learn more</p>
         </div> 
