@@ -38,6 +38,7 @@ export default function Home() {
                    <form onSubmit={handler}>
                     <input
                     value={email}
+                    placeholder="Email:"
                      onChange={(e)=> setEmail(e.target.value)}
                      type="text"/>
                      
