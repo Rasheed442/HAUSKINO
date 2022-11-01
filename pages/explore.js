@@ -23,7 +23,7 @@ function Explore({data}) {
           <button onClick={()=> setOpen(true)}>Play</button>
         </div>
 
-        <div className={style.scene}>
+        <div className={style.scene} key={data}>
           {data.items.map((datas)=>{
              const loop = datas.image
               for(let i=0; i < loop.length; i++){
